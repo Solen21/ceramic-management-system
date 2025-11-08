@@ -1,7 +1,7 @@
 @echo off
 REM =================================================
 REM Ceramic/General Product Management System Setup
-REM Creates full folder structure and starter files
+REM Creates full folder structure, starter files, and database SQL files
 REM =================================================
 
 REM --- Change this path to your project folder ---
@@ -57,5 +57,22 @@ type nul > app\utils/calculations.py
 type nul > app\utils/notifications.py
 type nul > app\utils/helpers.py
 
-echo Project folder structure created successfully!
+REM --- Database files ---
+type nul > database\01_roles_and_users.sql
+type nul > database\02_stores.sql
+type nul > database\03_companies.sql
+type nul > database\04_products.sql
+type nul > database\05_stock.sql
+type nul > database\06_purchases.sql
+type nul > database\07_sales.sql
+type nul > database\08_returns.sql
+type nul > database\09_broken_items.sql
+type nul > database\10_expenses.sql
+type nul > database\11_alerts.sql
+type nul > database\12_messages.sql
+type nul > database\13_group_chats.sql
+type nul > database\14_group_messages.sql
+type nul > database\15_group_members.sql
+
+echo Project folder structure and database files created successfully!
 pause
