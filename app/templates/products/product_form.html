@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Product</title>
+    <style>
+        body { font-family: sans-serif; margin: 2rem; }
+        .form-group { margin-bottom: 1rem; }
+        .form-group label { display: block; margin-bottom: 0.5rem; }
+        .form-group input { width: 100%; padding: 0.5rem; box-sizing: border-box; }
+        .btn { background-color: #007bff; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer; }
+        .btn:hover { background-color: #0056b3; }
+        .error { color: red; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+    <h1>Add a New Product</h1>
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}  <!-- This is for CSRF protection -->
+
+        <div class="form-group">
+            {{ form.name.label }}
+            {{ form.name() }}
+            {% for error in form.name.errors %}<span class="error">{{ error }}</span>{% endfor %}
+        </div>
+
+        <div class="form-group">
+            {{ form.price.label }}
+            {{ form.price() }}
+            {% for error in form.price.errors %}<span class="error">{{ error }}</span>{% endfor %}
+        </div>
+
+        <div class="form-group">
+            {{ form.stock.label }}
+            {{ form.stock() }}
+            {% for error in form.stock.errors %}<span class="error">{{ error }}</span>{% endfor %}
+        </div>
+
+        {{ form.submit(class="btn") }}
+    </form>
+</body>
+</html>
