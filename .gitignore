@@ -1,0 +1,17 @@
+# Ignore database folder (sensitive data)
+database/
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+
+# Ignore virtual environment (if used)
+venv/
+env/
+
+# Ignore config files with credentials
+config.py
+
+# Ignore system files
+.DS_Store
+Thumbs.db
